@@ -1,0 +1,55 @@
+{
+  "name": "syncano-socket-readme-generator",
+  "version": "1.0.0",
+  "description": "Generates a Github readme file from a Syncano socket.yml spec",
+  "main": "index.js",
+  "dependencies": {
+    "js-yaml": "^3.10.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-plugin-shebang": "0.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.1.4",
+    "regenerator-runtime": "^0.11.1",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prebuild": "rm -rf dist",
+    "build": "babel --out-dir dist --ignore *.test.js src",
+    "build:watch": "babel --out-dir dist --ignore *.test.js src --watch"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "bin": {
+    "s-readme": "dist/index.js",
+    "syncano-socket-readme-generator": "dist/index.js"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "author": "Adam Wardecki",
+  "license": "MIT"
+}
