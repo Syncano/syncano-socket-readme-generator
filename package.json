@@ -33,6 +33,10 @@
     "s-readme": "dist/index.js",
     "syncano-socket-readme-generator": "dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syncano/syncano-socket-readme-generator/"
+  },
   "jest": {
     "verbose": true,
     "transform": {
